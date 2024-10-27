@@ -1,0 +1,17 @@
+@mixin box-styling($padding:2.6rem) {
+    padding: $padding;
+    border-radius: 10px;
+
+}
+
+@mixin profile-border($border-color:transparent){
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: $border-color;
+}
+
+@mixin heading-color {
+    color:$color; 
+}

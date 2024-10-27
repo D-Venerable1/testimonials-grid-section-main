@@ -1,0 +1,111 @@
+.testimonial{
+    display: grid;
+    width: 90%;
+    height: 90vh;
+    grid-template-rows: 25.7rem 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap:2.5rem;
+    margin: 2rem auto;
+    justify-content: baseline;
+    align-items: start;
+
+    &__profile{
+        display: grid;
+        grid-template-columns: 6rem 1fr;
+
+        &-pic{
+            @include profile-border;
+            &-1{
+                @include profile-border($Light-grayish-blue);
+            }
+            &-4{
+                @include profile-border($Moderate-violet)
+            }
+        }
+
+        
+    }
+
+
+    &__headline {
+        color: $White;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+
+        &-3 {
+            color: $Very-dark-blackish-blue;
+        }
+        &-5{
+            color: $Very-dark-blackish-blue;
+        }
+    }
+
+    &__details{
+        font-size: 1.6rem;
+        color: #b9bbc0;
+    }
+
+    &__name{
+        &-1,
+        &-2,
+        &-4{
+            color: $White;
+        }
+       
+    }
+
+        &__quote{
+            position: absolute;
+            text-align: center;
+            top: 0;
+            right: 15%;
+            width: 23%;
+            z-index: -1;
+
+        }
+    &--1{
+        background-color: $Moderate-violet;
+        @include box-styling(3rem);
+        grid-column: 1/ span 2 ;
+        z-index: -1;
+        position: relative;
+    }
+    &--2{
+        background-color: $Very-dark-grayish-blue;
+        @include box-styling;
+        align-self: stretch;
+        justify-self: stretch;
+        height: 29.5rem;
+    }
+    &--3{
+        background-color: $White;
+        @include box-styling;
+        grid-row: 2/3;
+        margin-top: 4rem;
+        color: $Very-dark-grayish-blue;
+        height: 28.5rem;
+    
+    }
+    &--4{
+        background-color: $Very-dark-blackish-blue;
+        @include box-styling;
+        grid-column: 2/4;
+        margin-top: 4rem;
+        align-self: stretch;
+        justify-self: stretch;
+    }
+    &--5{
+        background-color: $White;
+        @include box-styling;
+        grid-column: 4/5;
+        grid-row: 1/2;
+        height: max-content;
+        width: 28rem;
+        color: $Very-dark-grayish-blue;
+    }
+}
+
+
+
